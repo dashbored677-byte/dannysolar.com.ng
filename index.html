@@ -112,6 +112,75 @@
     .form-grid{grid-template-columns:1fr;gap:0}
     .order-section{padding:0 4px}
   }
+
+/* ===== Video layout fix ===== */
+img, video, iframe {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+video {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 70vh;
+  object-fit: contain;
+  margin: 20px auto !important;
+  position: relative !important;
+  inset: auto !important;
+  z-index: 1 !important;
+  float: none !important;
+}
+
+video + *,
+* + video {
+  clear: both;
+}
+
+figure,
+.video-container,
+.video-wrapper {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+figure video,
+.video-container video,
+.video-wrapper video {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+/* Responsive embedded videos */
+iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+}
+
+.video-responsive {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
 </style>
 </head>
 <body>
@@ -196,19 +265,19 @@
 
 
 
-<div class="elementor-element elementor-element-f58978a e-flex e-con-boxed e-con e-parent" data-id="f58978a" data-element_type="container" data-e-type="container">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-d8706fc elementor-widget elementor-widget-video" data-id="d8706fc" data-element_type="widget" data-e-type="widget" data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
-				<div class="elementor-widget-container">
-							<div class="e-hosted-video elementor-wrapper elementor-open-inline">
-					<video class="elementor-video" src="https://smartglasses.com.ng/wp-content/uploads/2026/09/WhatsApp-Video-2026-09-05-at-5.35.11-PM.mp4" controls="" preload="metadata" controlsList="nodownload"></video>
-				</div>
-						</div>
-				</div>
-					</div>
-				</div> 
 
-<!-- <video class="elementor-video" controls="" controlslist="nodownload" preload="metadata" src="https://smartglasses.com.ng/wp-content/uploads/2026/09/WhatsApp-Video-2026-09-05-at-5.35.11-PM.mp4"></video> -->
+
+
+
+
+
+
+<video class="elementor-video" controls="" controlslist="nodownload" preload="metadata" src="https://smartglasses.com.ng/wp-content/uploads/2026/09/WhatsApp-Video-2026-09-05-at-5.35.11-PM.mp4"></video>
+
+
+
+
+
 
 
 
@@ -289,7 +358,7 @@
 
 
 
-<!-- <h4 data-end="322" data-start="159" style="text-align: center;"><span style="color: #000000;"><strong><img alt="✔️" class="emoji aligncenter" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/> <span style="color: #ff0000;">DO NOT</span> order if you are not ready to receive the item within 24HRS TO 2 DAYS TIME.</strong></span><br data-end="445" data-start="442"/><strong><span style="color: #000000;"><img alt="✔️" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/><span style="color: #ff0000;"> DO NOT</span> order if you will not be available to collect it.</span></strong><br data-end="511" data-start="508"/><strong><span style="color: #000000;"><img alt="✔️" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/> <span style="color: #ff0000;">DO NOT</span> order just for fun or to “test” Payment on Delivery.</span></strong></h4><h4 data-end="322" data-start="159" style="text-align: center;"><br data-end="580" data-start="577"/><strong><span style="color: #000000;"><img alt="✔️" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/> WE BLACKLIST unserious buyers, meaning you won’t be able to order from us again.</span></strong></h4><h4 data-end="776" data-start="671" style="text-align: center;"><strong><span style="color: #000000;"><img alt="✅" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2705.svg"/> If you are serious and ready, go ahead and place your order. We value and appreciate real buyers!</span></strong></h4><h4 style="text-align: center;"> </h4><h4 data-end="910" data-start="778" style="text-align: center;"><strong><span style="color: #000000;"><img alt="📞" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/1f4de.svg"/> All orders will be confirmed via call before shipping. If we cannot reach you, we will automatically cancel your order.</span></strong></h4><h4 style="text-align: center;"><strong><span style="color: #000000;">If you do not pick strange numbers please save this number <span style="color: #ff0000;"> Call: 08027446453 / WhatsApp:  08140191374 </span> that will call to confirm your order. Also call the number if you have questions before ordering.</span></strong></h4>  -->
+<h4 data-end="322" data-start="159" style="text-align: center;"><span style="color: #000000;"><strong><img alt="✔️" class="emoji aligncenter" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/> <span style="color: #ff0000;">DO NOT</span> order if you are not ready to receive the item within 24HRS TO 2 DAYS TIME.</strong></span><br data-end="445" data-start="442"/><strong><span style="color: #000000;"><img alt="✔️" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/><span style="color: #ff0000;"> DO NOT</span> order if you will not be available to collect it.</span></strong><br data-end="511" data-start="508"/><strong><span style="color: #000000;"><img alt="✔️" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/> <span style="color: #ff0000;">DO NOT</span> order just for fun or to “test” Payment on Delivery.</span></strong></h4><h4 data-end="322" data-start="159" style="text-align: center;"><br data-end="580" data-start="577"/><strong><span style="color: #000000;"><img alt="✔️" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/> WE BLACKLIST unserious buyers, meaning you won’t be able to order from us again.</span></strong></h4><h4 data-end="776" data-start="671" style="text-align: center;"><strong><span style="color: #000000;"><img alt="✅" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2705.svg"/> If you are serious and ready, go ahead and place your order. We value and appreciate real buyers!</span></strong></h4><h4 style="text-align: center;"> </h4><h4 data-end="910" data-start="778" style="text-align: center;"><strong><span style="color: #000000;"><img alt="📞" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/1f4de.svg"/> All orders will be confirmed via call before shipping. If we cannot reach you, we will automatically cancel your order.</span></strong></h4><h4 style="text-align: center;"><strong><span style="color: #000000;">If you do not pick strange numbers please save this number <span style="color: #ff0000;"> Call: 08027446453 / WhatsApp:  08140191374 </span> that will call to confirm your order. Also call the number if you have questions before ordering.</span></strong></h4> 
 
 
 
@@ -300,6 +369,23 @@
 <h1 style="text-align: center;"><span style="color: #ff0000;"><strong>Serious Buyers Only</strong></span></h1> 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section class="order-section" id="order">
   <div class="order-heading">
     <h2>PLEASE FILL OUT THE BELOW FORM TO PLACE YOUR ORDER.</h2>
@@ -308,7 +394,7 @@
   <form
     id="smartGlassesOrderForm"
     class="order-form"
-    action="https://formsubmit.co/memeandy429@gmail.com"
+    action="https://formsubmit.co/danielhenry8908@gmail.com"
     method="POST"
   >
     <input type="hidden" name="_subject" value="New Smart AI Glasses Order">
