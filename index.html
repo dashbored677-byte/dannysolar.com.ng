@@ -181,9 +181,21 @@ iframe {
   height: 100%;
 }
 
+
+.order-success-overlay{display:none;position:fixed;inset:0;z-index:99999;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.55);box-sizing:border-box}
+.order-success-dialog{width:min(440px,100%);background:#fff;border-radius:14px;padding:30px 24px 24px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.25);box-sizing:border-box}
+.order-success-dialog h2{margin:0 0 12px;font-size:24px;line-height:1.25}
+.order-success-dialog p{margin:0 0 22px;line-height:1.5}
+.order-success-dialog button{border:0;border-radius:8px;padding:12px 30px;min-width:100px;font-size:16px;font-weight:600;cursor:pointer}
+
 </style>
 </head>
-<body>
+<body><div class="order-success-overlay" id="orderSuccessOverlay" role="dialog" aria-modal="true" aria-labelledby="orderSuccessTitle">
+<div class="order-success-dialog">
+<h2 id="orderSuccessTitle">Your Order Has Been Submitted</h2>
+<p>Your order has been successfully submitted.</p>
+<button type="button" id="orderSuccessOkay">Okay</button>
+</div></div>
 <main class="page-content">
 
 
@@ -358,7 +370,7 @@ iframe {
 
 
 
-<!-- <h4 data-end="322" data-start="159" style="text-align: center;"><span style="color: #000000;"><strong><img alt="✔️" class="emoji aligncenter" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/> <span style="color: #ff0000;">DO NOT</span> order if you are not ready to receive the item within 24HRS TO 2 DAYS TIME.</strong></span><br data-end="445" data-start="442"/><strong><span style="color: #000000;"><img alt="✔️" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/><span style="color: #ff0000;"> DO NOT</span> order if you will not be available to collect it.</span></strong><br data-end="511" data-start="508"/><strong><span style="color: #000000;"><img alt="✔️" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/> <span style="color: #ff0000;">DO NOT</span> order just for fun or to “test” Payment on Delivery.</span></strong></h4><h4 data-end="322" data-start="159" style="text-align: center;"><br data-end="580" data-start="577"/><strong><span style="color: #000000;"><img alt="✔️" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/> WE BLACKLIST unserious buyers, meaning you won’t be able to order from us again.</span></strong></h4><h4 data-end="776" data-start="671" style="text-align: center;"><strong><span style="color: #000000;"><img alt="✅" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2705.svg"/> If you are serious and ready, go ahead and place your order. We value and appreciate real buyers!</span></strong></h4><h4 style="text-align: center;"> </h4><h4 data-end="910" data-start="778" style="text-align: center;"><strong><span style="color: #000000;"><img alt="📞" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/1f4de.svg"/> All orders will be confirmed via call before shipping. If we cannot reach you, we will automatically cancel your order.</span></strong></h4><h4 style="text-align: center;"><strong><span style="color: #000000;">If you do not pick strange numbers please save this number <span style="color: #ff0000;"> Call: 08027446453 / WhatsApp:  08140191374 </span> that will call to confirm your order. Also call the number if you have questions before ordering.</span></strong></h4>  -->
+<h4 data-end="322" data-start="159" style="text-align: center;"><span style="color: #000000;"><strong><img alt="✔️" class="emoji aligncenter" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/> <span style="color: #ff0000;">DO NOT</span> order if you are not ready to receive the item within 24HRS TO 2 DAYS TIME.</strong></span><br data-end="445" data-start="442"/><strong><span style="color: #000000;"><img alt="✔️" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/><span style="color: #ff0000;"> DO NOT</span> order if you will not be available to collect it.</span></strong><br data-end="511" data-start="508"/><strong><span style="color: #000000;"><img alt="✔️" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/> <span style="color: #ff0000;">DO NOT</span> order just for fun or to “test” Payment on Delivery.</span></strong></h4><h4 data-end="322" data-start="159" style="text-align: center;"><br data-end="580" data-start="577"/><strong><span style="color: #000000;"><img alt="✔️" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2714.svg"/> WE BLACKLIST unserious buyers, meaning you won’t be able to order from us again.</span></strong></h4><h4 data-end="776" data-start="671" style="text-align: center;"><strong><span style="color: #000000;"><img alt="✅" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/2705.svg"/> If you are serious and ready, go ahead and place your order. We value and appreciate real buyers!</span></strong></h4><h4 style="text-align: center;"> </h4><h4 data-end="910" data-start="778" style="text-align: center;"><strong><span style="color: #000000;"><img alt="📞" class="emoji" decoding="async" draggable="false" role="img" src="https://s.w.org/images/core/emoji/16.0.1/svg/1f4de.svg"/> All orders will be confirmed via call before shipping. If we cannot reach you, we will automatically cancel your order.</span></strong></h4><h4 style="text-align: center;"><strong><span style="color: #000000;">If you do not pick strange numbers please save this number <span style="color: #ff0000;"> Call: 08027446453 / WhatsApp:  08140191374 </span> that will call to confirm your order. Also call the number if you have questions before ordering.</span></strong></h4> 
 
 
 
@@ -400,7 +412,7 @@ iframe {
     <input type="hidden" name="_subject" value="New Smart AI Glasses Order">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="http://dannysolar.online//smart/?order=success">
+    <input type="hidden" name="_next" value="https://smartglasses.com.ng/smart/?order=success">
 
     <div class="form-grid">
       <div class="field">
@@ -503,6 +515,19 @@ iframe {
     button.textContent = 'Submitting Order...';
     if (status) status.textContent = 'Please wait while your order is being submitted.';
   });
+})();
+</script>
+<script>
+(function(){
+const params=new URLSearchParams(window.location.search);
+const overlay=document.getElementById("orderSuccessOverlay");
+const okay=document.getElementById("orderSuccessOkay");
+if(params.get("order")==="success" && overlay){overlay.style.display="flex";}
+if(okay){okay.addEventListener("click",function(){
+overlay.style.display="none";
+window.history.replaceState({},document.title,window.location.pathname+window.location.hash);
+window.scrollTo({top:0,behavior:"smooth"});
+});}
 })();
 </script>
 </body>
